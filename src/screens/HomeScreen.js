@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const categories = [
   { id: 1, name: 'Mountain Rides', icon: 'terrain' },
@@ -10,9 +12,9 @@ const categories = [
 ];
 
 const popularDestinations = [
-  { id: 1, name: 'Leh Ladakh', image: require('../assets/ladakh.jpg'), rating: 4.8 },
-  { id: 2, name: 'Goa Beaches', image: require('../assets/goa.jpg'), rating: 4.6 },
-  { id: 3, name: 'Kerala Backwaters', image: require('../assets/kerala.jpg'), rating: 4.7 },
+  { id: 1, name: 'Leh Ladakh', image: require('../assets/download.jpeg'), rating: 4.8 },
+  { id: 2, name: 'Goa Beaches', image: require('../assets/download.jpeg'), rating: 4.6 },
+  { id: 3, name: 'Kerala Backwaters', image: require('../assets/download.jpeg'), rating: 4.7 },
 ];
 
 const HomeScreen = ({ navigation }) => {
@@ -87,7 +89,7 @@ const HomeScreen = ({ navigation }) => {
         {[1, 2, 3].map(item => (
           <View key={item} style={styles.storyCard}>
             <Image 
-              source={require('../assets/story.jpg')} 
+              source={require('../assets/download.jpeg')} 
               style={styles.storyImage}
             />
             <View style={styles.storyInfo}>

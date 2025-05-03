@@ -29,6 +29,7 @@ const MainTabNavigator = () => {
           height: 60,
           paddingBottom: 10,
         },
+        headerShown: true
       }}
     >
       <Tab.Screen 
@@ -68,7 +69,13 @@ const MainTabNavigator = () => {
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator 
+        initialRouteName="Splash" 
+        screenOptions={{ 
+          headerShown: false,
+          cardStyle: { backgroundColor: 'white' },
+          presentation: 'card'
+        }}>
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />

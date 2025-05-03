@@ -6,10 +6,10 @@ const { width, height } = Dimensions.get('window');
 const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Image 
+      {/* <Image 
         source={require('../assets/welcome-bg.jpg')} 
         style={styles.backgroundImage}
-      />
+      /> */}
       <View style={styles.overlay}>
         <Text style={styles.title}>Welcome to Ghumakkad</Text>
         <Text style={styles.subtitle}>Your companion for exploring India's hidden gems</Text>
