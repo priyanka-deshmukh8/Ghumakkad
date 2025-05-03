@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
@@ -95,3 +96,10 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+=======
+# Ghumakkad
+A mobile application for Riders and Travellers of India 
+<hr>
+<img width="536" alt="image" src="https://github.com/user-attachments/assets/57f1b108-eee2-4273-92a7-a8121d900631" />
+
+>>>>>>> c4cb24aafc4dd6604c46d920c8b875de57ce6aee

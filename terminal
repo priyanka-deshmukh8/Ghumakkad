@@ -1,6 +1,0 @@
-cd Ghumakkad
-git init
-git add .
-git commit -m "Initial commit with basic screens"
-git remote add origin https://github.com/priyanka-deshmukh8/Ghumakkad.git
-git push -u origin main 
