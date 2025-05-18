@@ -1,7 +1,13 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { MainTabParamList } from '../navigation/AppNavigator';
 
-const ProfileScreen = ({ navigation }) => {
+type ProfileScreenProps = {
+  navigation: BottomTabNavigationProp<MainTabParamList, 'Profile'>;
+};
+
+const ProfileScreen: React.FC<ProfileScreenProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Profile</Text>

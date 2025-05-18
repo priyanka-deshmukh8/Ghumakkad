@@ -14,10 +14,26 @@ import ExploreScreen from '../screens/ExploreScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import DestinationDetailsScreen from '../screens/DestinationDetailsScreen';
 
-const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
+// Define types for navigation
+type RootStackParamList = {
+  Splash: undefined;
+  Welcome: undefined;
+  Login: undefined;
+  Register: undefined;
+  Main: undefined;
+  DestinationDetails: { destinationId: string };
+};
 
-const MainTabNavigator = () => {
+type MainTabParamList = {
+  Home: undefined;
+  Explore: undefined;
+  Profile: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator<MainTabParamList>();
+
+const MainTabNavigator: React.FC = () => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -66,7 +82,7 @@ const MainTabNavigator = () => {
   );
 };
 
-const AppNavigator = () => {
+const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator 

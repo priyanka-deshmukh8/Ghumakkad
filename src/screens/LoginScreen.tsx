@@ -1,15 +1,20 @@
 import React from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 
-const RegisterScreen = ({ navigation }) => {
+type LoginScreenProps = {
+  navigation: StackNavigationProp<RootStackParamList, 'Login'>;
+};
+
+const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Register</Text>
-      <TextInput style={styles.input} placeholder="Name" />
+      <Text style={styles.title}>Login</Text>
       <TextInput style={styles.input} placeholder="Email" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
-      <Button title="Register" onPress={() => navigation.navigate('Main')} />
-      <Button title="Login" onPress={() => navigation.navigate('Login')} />
+      <Button title="Login" onPress={() => navigation.navigate('Main')} />
+      <Button title="Register" onPress={() => navigation.navigate('Register')} />
     </View>
   );
 };
@@ -35,4 +40,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RegisterScreen; 
+export default LoginScreen; 
