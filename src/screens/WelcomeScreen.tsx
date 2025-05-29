@@ -1,7 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
+
+
+
 
 type WelcomeScreenProps = {
   navigation: StackNavigationProp<RootStackParamList, 'Welcome'>;
@@ -11,11 +15,11 @@ const { width, height } = Dimensions.get('window');
 
 const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      {/* <Image 
-        source={require('../assets/welcome-bg.jpg')} 
-        style={styles.backgroundImage}
-      /> */}
+    <ImageBackground
+      source={require('../assets/welcome.jpg')}
+      style={styles.backgroundImage}
+      resizeMode="cover"
+    >
       <View style={styles.overlay}>
         <Text style={styles.title}>Welcome to Ghumakkad</Text>
         <Text style={styles.subtitle}>Your companion for exploring India's hidden gems</Text>
@@ -36,18 +40,16 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   backgroundImage: {
+    flex: 1,
     width: width,
     height: height,
-    position: 'absolute',
+    justifyContent: 'center',
   },
   overlay: {
     flex: 1,

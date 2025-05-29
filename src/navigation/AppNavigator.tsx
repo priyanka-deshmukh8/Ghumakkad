@@ -15,7 +15,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import DestinationDetailsScreen from '../screens/DestinationDetailsScreen';
 
 // Define types for navigation
-type RootStackParamList = {
+export type RootStackParamList = {
   Splash: undefined;
   Welcome: undefined;
   Login: undefined;
