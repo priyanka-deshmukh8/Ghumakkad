@@ -13,6 +13,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import DestinationDetailsScreen from '../screens/DestinationDetailsScreen';
+import SettingsScreen from '../screens/SettingScreen';
 
 // Define types for navigation
 export type RootStackParamList = {
@@ -22,9 +23,10 @@ export type RootStackParamList = {
   Register: undefined;
   Main: undefined;
   DestinationDetails: { destinationId: string };
+  Settings: undefined;
 };
 
-type MainTabParamList = {
+export type MainTabParamList = {
   Home: undefined;
   Explore: undefined;
   Profile: undefined;
@@ -53,7 +55,7 @@ const MainTabNavigator: React.FC = () => {
         component={HomeScreen} 
         options={{
           headerShown: false,
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ color }: { color: string }) => (
             <Icon name="home" size={24} color={color} />
           ),
         }}
@@ -63,7 +65,7 @@ const MainTabNavigator: React.FC = () => {
         component={ExploreScreen} 
         options={{
           headerShown: false,
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ color }: { color: string }) => (
             <Icon name="explore" size={24} color={color} />
           ),
         }}
@@ -73,7 +75,7 @@ const MainTabNavigator: React.FC = () => {
         component={ProfileScreen} 
         options={{
           headerShown: false,
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ color }: { color: string }) => (
             <Icon name="person" size={24} color={color} />
           ),
         }}
@@ -107,6 +109,7 @@ const AppNavigator: React.FC = () => {
             headerTintColor: 'white',
           }}
         />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
